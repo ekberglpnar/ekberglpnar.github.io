@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletisim</title>
+</head>
+<body style ="background-image: linear-gradient(to right, rgba(255, 0, 0, 0.025), rgb(85, 0, 255)),url(2.jpg)">
+    <style>
+    body {
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0.025), rgb(85, 0, 255)), url(2.jpg);
+        }
+        h2 {
+            text-align: center;
+            color: white;
+            margin-top: 100px;
+        }
+        .contact {
+            background-color: white;
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        input[type="submit"] {
+            background-color: rgb(85, 0, 255);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(65, 0, 195);
+            
+        }
+    </style>
+
+    <div class="contact">
+        <h2>İletişim</h2>
+        <form action="" method="POST">
+            <style >h1 {text-align:center;}</style>
+            <h1>İletişim</h1>
+            <label for="name">İsim:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="subject">Konu:</label>
+            <input type="text" id="subject" name="subject" required><br><br>
+            <label for="message">Mesajınız:</label>
+            <textarea id="message" name="message" required></textarea><br><br>
+            <input type="submit" value="Gönder">
+        </form>
+    </div>
+    
+</body>
+</html>
