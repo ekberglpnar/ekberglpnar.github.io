@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Özür Dilerim</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #fff0f3, #ffffff, #ffe4ec);
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #c2185b;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 10px auto;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .btn {
+      display: inline-block;
+      background: #e91e63;
+      color: #fff;
+      padding: 12px 24px;
+      margin: 10px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #c2185b;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 15px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #d81b60;
+    }
+    iframe {
+      width: 100%;
+      height: 152px;
+      border: none;
+      border-radius: 15px;
+    }
+    textarea {
+      width: 100%;
+      min-height: 80px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Şevval, özür dilerim.</h1>
+    <p>Hatalarımın farkındayım ve telafi etmek istiyorum. Sana hak ettiğin sabır ve sevgiyi göstermek için benimle bir görüntülü konuşmayı esirgemez misin ?</p>
+    <a href="#invite" class="btn">Seni Çok ama Çok Seviyorum</a>
+    <a href="#apology" class="btn" style="background:#fff; color:#e91e63; border:1px solid #e91e63;">❤️ Neden özür diliyorum?</a>
+  </div>
+
+  <div class="container">
+    <section id="apology">
+      <h2>Sana karşı nerede hata yaptım?</h2>
+      <div class="card">
+        <h3>🙇‍♂️ Seni dinlemem gereken kadar dinlemedim ve saçma bir ayrılık kararı verdim</h3>
+        <p>Sonrasında saçma sapan konuştum</p>
+      </div>
+      <div class="card">
+        <h3>⌛ Sabırlı davranamadım</h3>
+        <p>Uzak ilişkinin verdiği özlem ile gereksiz yükseldim</p>
+      </div>
+      <div class="card">
+        <h3>💔 Sözlerimle incittim</h3>
+        <p>Niyetim öyle olmasa da etkisi öyle oldu. Sözlerimin sorumluluğunu alıyorum ve telafi etmek istiyorum.</p>
+      </div>
+    </section>
+
+    <section id="memories">
+      <h2>Güzel anılarımız</h2>
+      <div class="card">
+        <h3>📅 2 Ocak Herşeyin Başladığı Gün</h3>
+        <p>Ertesi sabah senden aldığım günaydın mesajının mutluluğu halen aklımda</p>
+      </div>
+      <div class="card">
+        <h3>📅 20 Şubat</h3>
+        <p>Bursadaki yeni evimize ilk çıktığımız gün</p>
+      </div>
+      <div class="card">
+        <h3>📅 Bugün</h3>
+        <p>İzin verirsen bugünde ilişkimizin bir dönüm noktası olsun.</p>
+      </div>
+    </section>
+
+    <section id="music">
+  <h2>Bu şarkı seni düşünürken çalıyor</h2>
+  <div class="card">
+    <iframe
+      style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/0tgVpDi06FyKpA1z0VMD4v?utm_source=generator"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+
+    <section id="invite">
+      <h2>Ufak bir görüntülü konuşma ile yeniden başlayalım mı ?</h2>
+      <div class="card">
+        <label>Mesajını kişiselleştir:</label>
+        <textarea id="customMsg" placeholder="Şevval bugün görüntülü konuşalım mı ?"></textarea>
+        <div style="margin-top:10px;">
+          <a id="waLink" class="btn" target="_blank">📩 WhatsApp ile gönder</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>Sevgiler, <strong>Ekber</strong></p>
+  </footer>
+
+  <script>
+    const waLink = document.getElementById('waLink');
+    const textarea = document.getElementById('customMsg');
+
+    function updateLink() {
+      let msg = textarea.value.trim() || "Şevval, benimle tekrar bir ilişkiye ne dersin ? – Ekber";
+      waLink.href = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+    }
+
+    textarea.addEventListener('input', updateLink);
+    updateLink();
+  </script>
+</body>
+</html>
